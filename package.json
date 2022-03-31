@@ -1,0 +1,29 @@
+{
+  "name": "project-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "db:seed": "node seed/data.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NasimAkbor/Project-5.git"
+  },
+  "keywords": [],
+  "author": "Nasim Akbor <akborn.nasim@gmail.com",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NasimAkbor/Project-5/issues"
+  },
+  "homepage": "https://github.com/NasimAkbor/Project-5#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "morgan": "^1.10.0"
+  }
+}
