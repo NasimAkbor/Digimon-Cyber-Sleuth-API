@@ -7,5 +7,4 @@ router.get("/", (req, res) => res.send("This is the api root!"));
 
 router.use("/", digiRoutes);
 
-
 export default router;
