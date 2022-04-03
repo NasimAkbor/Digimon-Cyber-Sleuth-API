@@ -1,4 +1,3 @@
-import { redirect } from "express/lib/response";
 import Digimon from "../models/digimon-list.js"
 
 export const getDigimon = async (req, res) => {
@@ -79,15 +78,16 @@ export const createDigimon = async (req, res) => {
 };
 
 export const updateDigimon = async (req, res) => {
-  const { name } = req.params;
-  const digimon = await House.findByIdAndUpdate(name, req.body);
+  const query = { Digmon: `${req.params}` };
+  console.log(query);
+  const digimon = await Digimon.findOneAndUpdate(query, req.body);
   res.status(200).json(digimon);
 };
 
 export const deleteDigimon = async (req, res) => {
   try {
-    const { name } = req.params;
-    const deleted = await House.findByIdAndDelete(name);
+    let { name } = req.params;
+    const deleted = await Digimon.findOneAndDelete(name);
 
     if (deleted) {
       return res.status(200).send("Digimon deleted!");
