@@ -1,6 +1,9 @@
+//Necessary Imports
 import mongoose from "mongoose";
+
 const Schema = mongoose.Schema;
 
+//Schema for seeding to follow
 let Digimon = new Schema({
   Number: { type: Number },
   Digimon: { type: String },

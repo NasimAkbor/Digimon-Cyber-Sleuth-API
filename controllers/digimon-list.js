@@ -1,5 +1,7 @@
+//Import model
 import Digimon from "../models/digimon-list.js"
 
+//Get request to obtain full JSON
 export const getDigimon = async (req, res) => {
   try {
     const digimon = await Digimon.find();
@@ -10,6 +12,7 @@ export const getDigimon = async (req, res) => {
   }
 };
 
+//Get request to get one specific digimon's object/JSON by name
 export const getDigimonName = async (req, res) => {
   try {
     let { name } = req.params;
@@ -24,6 +27,7 @@ export const getDigimonName = async (req, res) => {
   }
 };
 
+//Get request to show all digimon that share an attribute
 export const getDigimonAttribute = async (req, res) => {
   try {
     let { attribute } = req.params;
@@ -38,6 +42,7 @@ export const getDigimonAttribute = async (req, res) => {
   }
 };
 
+//Get request to show all digimon that are at a certain stage
 export const getDigimonStage = async (req, res) => {
   try {
     let { stage } = req.params;
@@ -52,6 +57,7 @@ export const getDigimonStage = async (req, res) => {
   }
 };
 
+//Get request to show a single digimon by its number
 export const getDigimonNumber = async (req, res) => {
   try {
     let { num } = req.params;
@@ -66,6 +72,7 @@ export const getDigimonNumber = async (req, res) => {
   }
 };
 
+//Post request to create a Digimon Object/JSON depending on the info provided in the body
 export const createDigimon = async (req, res) => {
   try {
     const digimon = new Digimon(req.body);
@@ -77,6 +84,7 @@ export const createDigimon = async (req, res) => {
   }
 };
 
+//Put request to update any Digimon file
 export const updateDigimon = async (req, res) => {
   const query = { Digimon: `${req.params.name}` };
   console.log(query);
@@ -84,6 +92,7 @@ export const updateDigimon = async (req, res) => {
   res.status(200).json(digimon);
 };
 
+//Delete request to remove a digimon's Object/JSON searched by their name
 export const deleteDigimon = async (req, res) => {
   try {
     const name = { Digimon: `${req.params.name}` };

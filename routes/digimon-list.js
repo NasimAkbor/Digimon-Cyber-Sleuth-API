@@ -2,7 +2,7 @@ import { Router } from "express";
 import * as controllers from "../controllers/digimon-list.js";
 
 const router = Router();
-
+//Router that determines what method is called when a certain link is sent a request
 router.get("/digimon", controllers.getDigimon);
 router.get("/digimon/name/:name", controllers.getDigimonName);
 router.get("/digimon/stage/:stage", controllers.getDigimonStage);
