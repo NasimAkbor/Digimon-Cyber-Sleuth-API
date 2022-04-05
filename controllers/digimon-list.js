@@ -78,7 +78,7 @@ export const createDigimon = async (req, res) => {
 };
 
 export const updateDigimon = async (req, res) => {
-  const query = { Digmon: `${req.params}` };
+  const query = { Digimon: `${req.params.name}` };
   console.log(query);
   const digimon = await Digimon.findOneAndUpdate(query, req.body);
   res.status(200).json(digimon);
@@ -86,11 +86,11 @@ export const updateDigimon = async (req, res) => {
 
 export const deleteDigimon = async (req, res) => {
   try {
-    let { name } = req.params;
+    const name = { Digimon: `${req.params.name}` };
     const deleted = await Digimon.findOneAndDelete(name);
 
     if (deleted) {
-      return res.status(200).send("Digimon deleted!");
+      return res.status(200).send(`Digimon, ${req.params.name} deleted!`);
     }
 
     throw new Error("Digimon not found");
