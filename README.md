@@ -1,6 +1,6 @@
 # Digimon Cyber Sleuth API 
 
-### Heroku Link: https://digimon-cyber-sleuth-api-nak.herokuapp.com/digi/
+### **Heroku Link**: https://digimon-cyber-sleuth-api-nak.herokuapp.com/digi/
 
 
 A REST API built with Mongoose, MongoDB, Express, Javascript, HTML, CSS and RESTful routes that shows the digimon and thier traits from the video-game Digimon Story: Cyber Sleuth
@@ -9,7 +9,7 @@ A REST API built with Mongoose, MongoDB, Express, Javascript, HTML, CSS and REST
 
 This project uses Schemas and Models to take and format JSON information that is then seeded into a database. That database is then used to build an API that can be accessed through multiple link routes.
 
-## Instructions
+## Instructions for local database manipulation:
 
 1) Clone down this repo.
 2) Install dependencies.
@@ -17,32 +17,32 @@ This project uses Schemas and Models to take and format JSON information that is
 4) Start server link.
 5) Either view the API info through a browser for the seeded information or manipulate the information through apps like Postman or Insomnia.
 
-## Clone repository
+### Clone repository
 
 ```
 git clone https://github.com/NasimAkbor/Digimon-Cyber-Sleuth-API
 ```
 
-## Install Dependencies
+### Install Dependencies
 
 ```
 npm install 
 ```
 
-## Seed the data
+### Seed the data
 
 ```
 npm run db:seed
 ```
 
-## Connect to server
+### Connect to server
 ```
 npm run start
 ````
 
 ## API Endpoints
 #### IN BROWSER ONLY GET COMMANDS WILL WORK
-In an app like Postman you can run the rest of the commands to manipulate the API.
+in an app like Postman you can run the rest of the commands to manipulate the API.
 
 | Method | Endpoint         | Description             |
 | ------ | ---------------- | ----------------------- |
