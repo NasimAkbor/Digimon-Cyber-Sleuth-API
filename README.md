@@ -1,6 +1,9 @@
 # Digimon Cyber Sleuth API 
 
-A REST API built with Mongoose, MongoDB, Express, Javascript, HTML, CSS and RESTful routes that all
+### Heroku Link: https://digimon-cyber-sleuth-api-nak.herokuapp.com/digi/
+
+
+A REST API built with Mongoose, MongoDB, Express, Javascript, HTML, CSS and RESTful routes that shows the digimon and thier traits from the video-game Digimon Story: Cyber Sleuth
 
 ## Description
 
